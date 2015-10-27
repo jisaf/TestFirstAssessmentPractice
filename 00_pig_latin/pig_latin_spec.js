@@ -36,7 +36,8 @@ describe("translate", function() {
   });
 
   it("translates a word beginning with three consonants", function() {
-    translate("three").should == "eethray"
+    var s = translate("three");
+    expect(s).toEqual('eethray');
   });
 
   it("counts 'sch' as a single phoneme", function() {
@@ -58,5 +59,6 @@ describe("translate", function() {
     var s = translate("the quick brown fox");
     expect(s).toEqual("ethay ickquay ownbray oxfay");
   });
+
 
 });
